@@ -10,7 +10,7 @@ ADmiRE annotations can be accessed in THREE different ways:
   Download the ADmiRE.tab file and run the attached perl script,  
   perl annotate_admire.pl -i $input.tab -o $input.admire.tab -admire_path /path-to-admire/
   
-3. For Calling miRNA Variants from the sequence alignment(BAM) files: 
+3. For Calling miRNA Variants from the sequence alignment(BAM) files:   
   Suggested script for running the pipeline is in directory: ADmiRE- from BAM files
   
   
