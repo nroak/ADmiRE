@@ -7,7 +7,7 @@ ADmiRE annotations can be accessed in THREE different ways:
   For more information:http://www.ensembl.org/info/docs/tools/vep/script/vep_custom.html
   
 2. For Tab delimited files: Custom script to add ADmiRE columns to the end of each row.  
-  Download the ADmiRE.tab file and run the attached perl script,  
+  Download the ADmiRE.tab file from https://github.com/nroak/ADmiRE/  and run the attached perl script,  
   perl annotate_admire.pl -i $input.tab -o $input.admire.tab -admire_path /path-to-admire/
   
 3. For Calling miRNA Variants from the sequence alignment(BAM) files:   
