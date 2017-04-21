@@ -1,4 +1,4 @@
-# ADmiRE- Annnotative Database of miRNA Elements
+# ADmiRE- Annotative Database of miRNA Elements
 
 ADmiRE annotations can be accessed in THREE different ways:
 1. For VCF files: A simple custom annotation flag in Variant Effect Predictor (VEP) that uses ADmiRE in a BED file format.  
