@@ -12,9 +12,10 @@ Annotation of a VCF file requires use of one of the exisiting annotation tools, 
 ## For Tab delimited files: 
 To annotate a tab separated variant file, you can use the attached perl script that uses ADmiRE.tab to add miRNA annotation columns to the end of each line. For variants that do not lie within miRNA regions, 'NA' values are added.
 
-### Download the ADmiRE.tab file from https://figshare.com/s/7b3bea2aa33470396f50 and run the attached perl script,  
+Download the ADmiRE.tab file from https://figshare.com/s/7b3bea2aa33470396f50 and run the attached perl script,  
 
-### Test files are provided for this perl script. To test your command is working, please run, 
+### To test your command is working:
+Test files are provided for this perl script.
 perl annotate_admire.pl --input test.tab --output test.admire.tab  
 
 ### To run the sample files using the scipt:
