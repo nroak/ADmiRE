@@ -1,6 +1,6 @@
 # ADmiRE- Annotative Database of miRNA Elements
 
-ADmiRE annotations can be accessed in THREE different ways:
+ADmiRE annotations can be added to a tab separated variant file using a stand-alone Perl script. Only for the anntoation of a VCF file, prior installation of VEP annotation tool is required.
 
 ## For VCF files: 
 Annotation of a VCF file requires use of one of the exisiting annotation tools, Ensembl's variant effect predictor (VEP). By using the custom annotation flag in Variant Effect Predictor (VEP) pass the ADmiRE datbase file in the BED format.  
