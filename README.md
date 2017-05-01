@@ -3,11 +3,13 @@
 ADmiRE annotations can be accessed in THREE different ways:
 
 ## For VCF files: 
-Annotation of a VCF file requires use of one of the exisiting annotation tools, Ensembl's variant effect predictor (VEP).
-  A simple custom annotation flag in Variant Effect Predictor (VEP) that uses ADmiRE in a BED file format.  
-  Download the ADmiRE.bed.gz and ADmiRE.bed.gz.tbi  
-  variant_effect_predictor.pl -i $input.vcf -o $input.admire.vcf --custom /path-to-file/ADmiRE.bed.gz,ADmiRE,bed,exact    
-  For more information:http://www.ensembl.org/info/docs/tools/vep/script/vep_custom.html
+Annotation of a VCF file requires use of one of the exisiting annotation tools, Ensembl's variant effect predictor (VEP). By using the custom annotation flag in Variant Effect Predictor (VEP) pass the ADmiRE datbase file in the BED format.  
+
+Download the ADmiRE.bed.gz and ADmiRE.bed.gz.tbi  
+
+variant_effect_predictor.pl -i $input.vcf -o $input.admire.vcf --custom /path-to-file/ADmiRE.bed.gz,ADmiRE,bed,exact    
+
+For more information:http://www.ensembl.org/info/docs/tools/vep/script/vep_custom.html
   
 ## For Tab delimited files: 
 To annotate a tab separated variant file, you can use the attached perl script that uses ADmiRE.tab to add miRNA annotation columns to the end of each line. For variants that do not lie within miRNA regions, 'NA' values are added.
