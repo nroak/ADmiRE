@@ -9,8 +9,7 @@ ADmiRE annotations can be accessed in THREE different ways:
   
 2. For Tab delimited files: To annotate a tab separated variant file, you can use the attached perl script that uses ADmiRE.tab to add miRNA annotation columns to the end of each line. For variants that do not lie within miRNA regions, 'NA' values are added.
   Test files are provided for this perl script. To test your command is working, please run, 
-  perl annotate_admire.pl --input test.tab --output test.admire.tab
-  
+  perl annotate_admire.pl --input test.tab --output test.admire.tab  
   Custom script to add ADmiRE columns to the end of each row.  
   Download the ADmiRE.tab file from https://figshare.com/s/7b3bea2aa33470396f50 and run the attached perl script,  
   perl annotate_admire.pl [--input FILE] [--output FILE] [--admire_path=PATH] [--chr=NUMBER] [--pos=NUMBER]
