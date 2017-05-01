@@ -21,10 +21,15 @@ perl annotate_admire.pl --input test.tab --output test.admire.tab
 perl annotate_admire.pl [--input FILE] [--output FILE] [--admire_path=PATH] [--chr=NUMBER] [--pos=NUMBER]
 
 --input: Input file path and name
+
 --output: Output file path and name (defaulth is input_file_name.ADmiRE.tab
+
 --admire_path: Path to ADmiRE.tab database. Default is the same directory with annotate_admire.pl
+
 --chr: Column number in the input tab separated file where chormosome information is present. Default is 1.
+
 --pos: Column number in the input tab separated file where base position information is present. Default is 2.
+
 
 
 ## For Calling miRNA Variants from the sequence alignment(BAM) files: [COMING SOON...]
