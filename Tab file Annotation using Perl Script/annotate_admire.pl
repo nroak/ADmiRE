@@ -58,11 +58,13 @@ use warnings;
 use strict;
 use Getopt::Long qw(GetOptions);
 use Pod::Usage;
+use File::Basename;
+my $dirname = dirname(__FILE__);
 
 $"="\t";
 my $input;
 my $output;
-my $admire_path= './';
+my $admire_path= $dirname."/";
 my $chr = "0";
 my $pos = "1";
 my $help;
