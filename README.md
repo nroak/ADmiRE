@@ -15,14 +15,18 @@ Clone the ADmiRE repository
 
 `git clone https://github.com/nroak/ADmiRE.git`
 
-### To annotate a Tab separated file,
+### To annotate a Tab separated file:
+For Details, refer to ADmiRE/annotate_tsv_using_perl/README.md
+
 `cd ./ADmiRE/annotate_tsv_using_perl/`
 
 `gzip -d ADmiRE.tab.gz`
 
 `perl annoated_admire.pl --input INPUT_FILE --output OUTPUT_FILE`
 
-### To annotate a VCF file,
+### To annotate a VCF file:
+For Details, refer to ADmiRE/annotate_VCF_using_VEP/README.md
+
 `cd ./ADmiRE/annotate_VCF_using_VEP`
 
 `variant_effect_predictor.pl -i $input.vcf -o $input.admire.vcf --custom /path-to-file/ADmiRE.bed.gz,ADmiRE,bed,exact`
