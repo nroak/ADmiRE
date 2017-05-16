@@ -2,11 +2,11 @@
 
 ## Types of Input files
 
-Two primary ways of adding ADmiRE Annotations to exisiting list of variants and one way of calling miRNA region variants from BAM files:
+Two primary ways of adding ADmiRE Annotations to existing list of variants and one way of calling miRNA region variants from BAM files:
 
 1. **Tab-separated Files (\*.tsv, \*.mafplus, etc.):** Using Perl script in /ADmiRE/annotate_tsv_using_perl/
 
-2. **VCF Files:** Using Ensemlbl Variant Effect Predictor (VEP) tool. Requires prior VEP installation, suitable for users with exisiting VEP workflows.
+2. **VCF Files:** Using Ensembl Variant Effect Predictor (VEP) tool. Requires prior VEP installation, suitable for users with existing VEP workflows.
 
 3. **BAM Files:** [COMING SOON]
 
