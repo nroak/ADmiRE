@@ -4,9 +4,13 @@ To annotate a tab separated variant file, you can use the attached Perl script t
 
 ## Step-by-step Guide:
 (1) Download the github repository nroak/ADmiRE/annotate_tsv_using_perl/
+
 (2) cd /annotate_tsv_using_perl
+
 (4) gzip -d ADmiRE.tab.gz
+
 (6) perl annotate_admire.pl [--input INPUT_FILE] [--output OUTPUT_FILE] [--admire_path=PATH] [--chr=NUMBER] [--pos=NUMBER]
+
 
 
 ### Detailed desription of the input options:
@@ -24,4 +28,5 @@ perl annotate_admire.pl [--input INPUT_FILE] [--output OUTPUT_FILE] [--admire_pa
 
 ### To test your command is working:
 Test files are provided for this Perl script. Please run,
+
 perl annotate_admire.pl --input test.tab --output test.admire.tab
