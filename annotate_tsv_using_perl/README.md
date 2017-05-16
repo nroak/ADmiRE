@@ -31,4 +31,4 @@ To annotate a tab separated variant file, you can use the attached Perl script t
 ### To test your command is working:
 Test files are provided for this Perl script. Please run,
 
-`perl annotate_admire.pl --input test.tab --output test.admire.tab`
+`perl annotate_admire.pl --input test_input.tab --output test_input.admire.tab`
