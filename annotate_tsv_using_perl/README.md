@@ -1,6 +1,6 @@
 # ADmiRE- Annotative Database of miRNA Elements: Annotating Tab-separated variants (eg. *.tsv, *.mafplus, etc.)
 
-To annotate a tab separated variant file, you can use the attached Perl script that uses ADmiRE.tab to add miRNA annotation columns to the end of each line. For variants that do not lie within miRNA regions, 'NA' values are added.
+To annotate a tab separated variant file, you can use the attached Perl script that uses ADmiRE.tab to add miRNA annotation columns to the end of each line. For variants that do not lie within miRNA regions, 'NA' values are added. If a variant lies within more than one miRNAs, annotations for each miRNA are added on a separate line. Thus the resulting output may contain more lines than the input file.
 
 ## Step-by-step Guide:
 (1) Download the github repository nroak/ADmiRE/annotate_tsv_using_perl/
