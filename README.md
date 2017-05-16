@@ -15,6 +15,10 @@ Clone the ADmiRE repository
 
 `git clone https://github.com/nroak/ADmiRE.git`
 
+Alternatively, you can download the ADmiRE directory in a ZIP file format. Make sure to save this file as **"ADmiRE"** and NOT **"ADmiRE-master"**.
+
+`unzip ADmiRE.zip`
+
 ### To annotate a Tab separated file:
 For Details, refer to ADmiRE/annotate_tsv_using_perl/README.md
 
