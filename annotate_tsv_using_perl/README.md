@@ -7,9 +7,9 @@ To annotate a tab separated variant file, you can use the attached Perl script t
 
 (2) cd /annotate_tsv_using_perl
 
-(4) gzip -d ADmiRE.tab.gz
+(3) gzip -d ADmiRE.tab.gz
 
-(6) perl annotate_admire.pl [--input INPUT_FILE] [--output OUTPUT_FILE] [--admire_path=PATH] [--chr=NUMBER] [--pos=NUMBER]
+(4) perl annotate_admire.pl [--input INPUT_FILE] [--output OUTPUT_FILE] [--admire_path=PATH] [--chr=NUMBER] [--pos=NUMBER]
 
 
 
