@@ -13,10 +13,10 @@ To annotate a tab separated variant file, you can use the attached Perl script t
 
 (4) Run the script to annotate the input file in a tab separated format. Note that the script assumes header line to start with **#** or **CHROM** or **Hugo_Symbol**. If neither of these are header of the first column, the output file will not contain a header line.
 
-`perl annotate_admire.pl [--input INPUT_FILE] [--output OUTPUT_FILE] [--admire_path=PATH] [--chr=NUMBER] [--pos=NUMBER]`
+`perl annotate_admire.pl [--input INPUT_FILE] [--output OUTPUT_FILE] [--admire_path PATH] [--chr NUMBER] [--pos NUMBER]`
 
 ### Detailed desription of the input options:
-`perl annotate_admire.pl [--input INPUT_FILE] [--output OUTPUT_FILE] [--admire_path=PATH] [--chr=NUMBER] [--pos=NUMBER]`
+`perl annotate_admire.pl [--input INPUT_FILE] [--output OUTPUT_FILE] [--admire_path PATH] [--chr NUMBER] [--pos NUMBER]`
 
 --input: INPUT_FILE [REQUIRED]
 
