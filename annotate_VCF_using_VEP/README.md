@@ -5,12 +5,17 @@ Annotation of a VCF file requires use of one of the exisiting annotation tools, 
 
 #### Download the ADmiRE.bed.gz and ADmiRE.bed.gz.tbi
 `git clone https://github.com/nroak/ADmiRE.git
+
 cd ./ADmiRE/annotate_VCF_using_VEP
+
 variant_effect_predictor.pl -i $input.vcf -o $input.admire.vcf --custom /path-to-file/ADmiRE.bed.gz,ADmiRE,bed,exact`
 
 If you don't have git installed, download the zip file, ADmiRE-master.zip
+
 `unzip ADmiRE-master.zip
+
 cd ./ADmiRE-master/annotate_VCF_using_VEP
+
 variant_effect_predictor.pl -i $input.vcf -o $input.admire.vcf --custom /path-to-file/ADmiRE.bed.gz,ADmiRE,bed,exact`
 
 
