@@ -9,4 +9,8 @@ Download the ADmiRE.bed.gz and ADmiRE.bed.gz.tbi
 
 variant_effect_predictor.pl -i $input.vcf -o $input.admire.vcf --custom /path-to-file/ADmiRE.bed.gz,ADmiRE,bed,exact    
 
-For more information:http://www.ensembl.org/info/docs/tools/vep/script/vep_custom.html
+At the end of the INFO field, ADmiRE annotations are added as:
+
+ADmiRE=pre_miRNA_name|pre_miRNA_ID|miRNA_Domain|miRNA_Family_Name|miRNA_Family_ID|Mature_Position|mature_miRNA_Name|mature_miRNA_ID|High_Confidence_miRNA|gnomAD_Constrained_miRNA|Conserved_100vert_miRNA|PhyloP_100way_Score|PhastCons_100way_Score|HMDD_Disease|HMDD_Targets|miRTarBase_TargetCount|miRTarBase_TargetGene|miRTarBase_Reference
+
+For more information on VEP custom flag:http://www.ensembl.org/info/docs/tools/vep/script/vep_custom.html
