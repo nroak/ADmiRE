@@ -51,17 +51,18 @@ ADmiRE Headers
      7  Family_Name
      8  Family_ID
      9  Precursor_Pos
-    10  Mature_Pos
-    11  Mature_Name
-    12  Mature_ID
-    13  Mature_Type
+    10  PRED_MOTIF
+    11  Mature_Pos
+    12  Mature_Name
+    13  Mature_ID
     14  High_Confidence
     15  gnomAD_Constrained_MIRNA
     16  Conserved_ADmiRE
-    17  Phylop_100way
-    18  Phastcons_100way
-    19  gnomAD_Count
-    20  gnomAD_MAF
+    17  Robust_FANTOM5
+    18  Phylop_100way
+    19  Phastcons_100way
+    20  gnomAD_Count
+    21  gnomAD_MAF
 
 =cut
 
@@ -110,7 +111,7 @@ foreach my $line_db (<FD>){
 	my $hash_key1=$entry_db[0]."_".$entry_db[1];
 	my $hash_key2=$entry_db[3];
 	my @hash_value= @entry_db[0..$#entry_db];	
-	if ($entry_db[0] ne "MIRNA" ){push (@{$mirbase{$hash_key1}{$hash_key2}}, @hash_value);}
+	if ($entry_db[0] ne "Chromosome" ){push (@{$mirbase{$hash_key1}{$hash_key2}}, @hash_value);}
 	}
 close FD;
 
@@ -119,7 +120,7 @@ open FP, "<$input" or die "No Variant File";
 open FO, ">$output" or die "No Output File";
 
 my @empty;
-push @empty, "NA" foreach(1..17);
+push @empty, "NA" foreach(1..18);
 $chr -= 1;
 $pos -= 1;
 ALLMUT: while (my $line_maf = <FP>){
@@ -127,13 +128,13 @@ ALLMUT: while (my $line_maf = <FP>){
 	#print $line_maf."\n";
 	my @entry_maf = split ("\t",$line_maf);
 	chomp @entry_maf;
-	if ($line_maf =~ /^\#/ || $line_maf =~ /^CHROM/ || $line_maf =~ /^Hugo_Symbol/) { print FO "@entry_maf\tMIRNA\tPRE_ID\tMIRNA_Feature\tFamily_Name\tFamily_ID\tPrecursor_Pos\tMature_Pos\tMature_Name\tMature_ID\tMature_Type\tHigh_Confidence\tgnomAD_Constrained_MIRNA\tConserved_100vert_ADmiRE\tPhyloP_100way\tPhastcons_100way\tgnomAD_Count\tgnomAD_MAF\n";}
+	if ($line_maf =~ /^\#/ || $line_maf =~ /^CHROM/ || $line_maf =~ /^Hugo_Symbol/) { print FO "@entry_maf\tMIRNA\tPRE_ID\tMIRNA_Feature\tFamily_Name\tFamily_ID\tPrecursor_Pos\tPRED_MOTIF\tMature_Pos\tMature_Name\tMature_ID\tHigh_Confidence\tgnomAD_Constrained_MIRNA\tConserved_100vert_ADmiRE\tFANTOM5_Robust\tPhyloP_100way\tPhastcons_100way\tgnomAD_Count\tgnomAD_MAF\n";}
 	elsif ($line_maf !~ /^\#/ && $line_maf !~ /^CHROM/ && $line_maf !~ /^Hugo_Symbol/) {
 		my $db_key=$entry_maf[$chr]."_".$entry_maf[$pos];
 		if ( keys %{$mirbase{$db_key}}){}
 		else {print FO "@entry_maf\t@empty\n";next ALLMUT;}
 		foreach my $db_key2 ( keys %{$mirbase{$db_key}}) {
-			print FO "@entry_maf\t@{$mirbase{$db_key}{$db_key2}}[3..19]\n";
+			print FO "@entry_maf\t@{$mirbase{$db_key}{$db_key2}}[3..20]\n";
 		   	}
 		next ALLMUT;
 		}
