@@ -9,8 +9,6 @@ Two primary ways of adding ADmiRE Annotations to existing list of variants and o
 
 2. **VCF Files:** Using Ensembl Variant Effect Predictor (VEP) tool. Requires prior VEP installation, suitable for users with existing VEP workflows.
 
-3. **BAM Files:** [COMING SOON]
-
 ## Step-by-step Usage Guide
 Clone the ADmiRE repository
 
