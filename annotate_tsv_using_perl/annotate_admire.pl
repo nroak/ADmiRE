@@ -63,7 +63,9 @@ ADmiRE Headers
     19  Phastcons_100way
     20  gnomAD_Count
     21  gnomAD_MAF
-
+    22  gnomad_af_precursor_quantile
+    23  gnomad_af_mature_quantile
+    24  gnomad_af_family_quantile
 =cut
 
 #!/usr/bin/perl
@@ -120,7 +122,7 @@ open FP, "<$input" or die "No Variant File";
 open FO, ">$output" or die "No Output File";
 
 my @empty;
-push @empty, "NA" foreach(1..18);
+push @empty, "NA" foreach(1..21);
 $chr -= 1;
 $pos -= 1;
 ALLMUT: while (my $line_maf = <FP>){
@@ -128,13 +130,13 @@ ALLMUT: while (my $line_maf = <FP>){
 	#print $line_maf."\n";
 	my @entry_maf = split ("\t",$line_maf);
 	chomp @entry_maf;
-	if ($line_maf =~ /^\#/ || $line_maf =~ /^CHROM/ || $line_maf =~ /^Hugo_Symbol/) { print FO "@entry_maf\tMIRNA\tPRE_ID\tMIRNA_Feature\tFamily_Name\tFamily_ID\tPrecursor_Pos\tPRED_MOTIF\tMature_Pos\tMature_Name\tMature_ID\tHigh_Confidence\tgnomAD_Constrained_MIRNA\tConserved_100vert_ADmiRE\tFANTOM5_Robust\tPhyloP_100way\tPhastcons_100way\tgnomAD_Count\tgnomAD_MAF\n";}
+	if ($line_maf =~ /^\#/ || $line_maf =~ /^CHROM/ || $line_maf =~ /^Hugo_Symbol/) { print FO "@entry_maf\tMIRNA\tPRE_ID\tMIRNA_Feature\tFamily_Name\tFamily_ID\tPrecursor_Pos\tPRED_MOTIF\tMature_Pos\tMature_Name\tMature_ID\tHigh_Confidence\tgnomAD_Constrained_MIRNA\tConserved_100vert_ADmiRE\tFANTOM5_Robust\tPhyloP_100way\tPhastcons_100way\tgnomAD_Count\tgnomAD_MAF\tgnomad_af_precursor_quantile\tgnomad_af_mature_quantile\tgnomad_af_family_quantile\n";}
 	elsif ($line_maf !~ /^\#/ && $line_maf !~ /^CHROM/ && $line_maf !~ /^Hugo_Symbol/) {
 		my $db_key=$entry_maf[$chr]."_".$entry_maf[$pos];
 		if ( keys %{$mirbase{$db_key}}){}
 		else {print FO "@entry_maf\t@empty\n";next ALLMUT;}
 		foreach my $db_key2 ( keys %{$mirbase{$db_key}}) {
-			print FO "@entry_maf\t@{$mirbase{$db_key}{$db_key2}}[3..20]\n";
+			print FO "@entry_maf\t@{$mirbase{$db_key}{$db_key2}}[3..23]\n";
 		   	}
 		next ALLMUT;
 		}
