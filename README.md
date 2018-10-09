@@ -21,12 +21,14 @@ Preprint: https://www.biorxiv.org/content/early/2017/08/16/177170
 ### To annotate a Tab separated file:
 
 1. Clone the ADmiRE repository
+
     `git clone https://github.com/nroak/ADmiRE.git`
     
     Alternatively, you can download the ADmiRE directory in a ZIP file format. Make sure to save this file as **"ADmiRE"** and NOT **"ADmiRE-master"**.
     `unzip ADmiRE.zip`
 
-2. Unzip the ADmiRE.tab.gz file (Unzipped file size ~213 Mb)
+2. Unzip the ADmiRE.tab.gz file (Unzipped file size ~232 MB)
+
     `gzip -d ADmiRE.tab.gz`
 
 3. Run the script to annotate the input file in a tab separated format.
