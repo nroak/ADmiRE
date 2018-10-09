@@ -7,11 +7,15 @@ Preprint: https://www.biorxiv.org/content/early/2017/08/16/177170
 
 2. **VCF Files:** 
     - **Using Ensembl Variant Effect Predictor (VEP) tool:**
+        
         Follow instructions in ./ADmiRE/annotate_VCF_using_VEP/Readme.md
-    Requires prior VEP installation, suitable for users with existing VEP workflows.
+        
+        Requires prior VEP installation, suitable for users with existing VEP workflows.
     - **Using ANNOVAR:**
+        
         ADmiRE is available as 'User-contributed-dataset' on ANNOVAR website for integration into existing pipelines.
-    http://annovar.openbioinformatics.org/en/latest/user-guide/download/#user-contributed-datasets
+        
+        http://annovar.openbioinformatics.org/en/latest/user-guide/download/#user-contributed-datasets
 
 ## Step-by-step Usage Guide
 ### To annotate a Tab separated file:
