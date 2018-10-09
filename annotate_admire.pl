@@ -46,26 +46,26 @@ ADmiRE Headers
      2  Start
      3  Stop
      4  MIRNA
-     5  PRE_ID
-     6  MIRNA_Feature
-     7  Family_Name
-     8  Family_ID
-     9  Precursor_Pos
-    10  PRED_MOTIF
-    11  Mature_Pos
-    12  Mature_Name
-    13  Mature_ID
-    14  High_Confidence
-    15  gnomAD_Constrained_MIRNA
-    16  Conserved_ADmiRE
-    17  Robust_FANTOM5
-    18  Phylop_100way
-    19  Phastcons_100way
-    20  gnomAD_Count
-    21  gnomAD_MAF
-    22  gnomad_af_precursor_quantile
-    23  gnomad_af_mature_quantile
-    24  gnomad_af_family_quantile
+     5  MIRNA_Domain
+     6  Family_Name
+     7  Precursor_Pos
+     8  Predicted_Motif
+     9  Mature_Name
+    10  Mature_Pos
+    11  High_Confidence
+    12  Robust_FANTOM5
+    13  Conserved_ADmiRE
+    14  AF_Quantile_gnomAD
+    15  HMDD_KnownDisease_PMID
+    16  HMDD_ValidatedTargets_Disease_PMID
+    17  miRTarBase_NumberOfTargets
+    18  miRTarBase_TargetGene_ValidationType
+    19  miRTarBase_Reference_PMID
+    20  TranscriptionFactor_PMID
+    21  Phylop_100way
+    22  Phastcons_100way
+    23  gnomAD_Count
+    24  gnomAD_MAF
 =cut
 
 #!/usr/bin/perl
@@ -130,7 +130,7 @@ ALLMUT: while (my $line_maf = <FP>){
 	#print $line_maf."\n";
 	my @entry_maf = split ("\t",$line_maf);
 	chomp @entry_maf;
-	if ($line_maf =~ /^\#/ || $line_maf =~ /^CHROM/ || $line_maf =~ /^Hugo_Symbol/) { print FO "@entry_maf\tMIRNA\tPRE_ID\tMIRNA_Feature\tFamily_Name\tFamily_ID\tPrecursor_Pos\tPRED_MOTIF\tMature_Pos\tMature_Name\tMature_ID\tHigh_Confidence\tgnomAD_Constrained_MIRNA\tConserved_100vert_ADmiRE\tFANTOM5_Robust\tPhyloP_100way\tPhastcons_100way\tgnomAD_Count\tgnomAD_MAF\tgnomad_af_precursor_quantile\tgnomad_af_mature_quantile\tgnomad_af_family_quantile\n";}
+	if ($line_maf =~ /^\#/ || $line_maf =~ /^CHROM/ || $line_maf =~ /^Hugo_Symbol/|| $line_maf =~ /^chr/) { print FO "@entry_maf\tMIRNA\tMIRNA_Domain\tFamily_Name\tPrecursor_Pos\tPredicted_Motif\tMature_Name\tMature_Pos\tHigh_Confidence\tRobust_FANTOM5\tConserved_ADmiRE\tAF_Quantile_gnomAD\tHMDD_KnownDisease_PMID\tHMDD_ValidatedTargets_Disease_PMID\tmiRTarBase_NumberOfTargets\tmiRTarBase_TargetGene_ValidationType\tmiRTarBase_Reference_PMID\tTranscriptionFactor_PMID\tPhylop_100way\tPhastcons_100way\tgnomAD_Count\tgnomAD_MAF\n";}
 	elsif ($line_maf !~ /^\#/ && $line_maf !~ /^CHROM/ && $line_maf !~ /^Hugo_Symbol/) {
 		my $db_key=$entry_maf[$chr]."_".$entry_maf[$pos];
 		if ( keys %{$mirbase{$db_key}}){}
