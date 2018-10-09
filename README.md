@@ -6,10 +6,10 @@ Preprint: https://www.biorxiv.org/content/early/2017/08/16/177170
 1. **Tab-separated Files (\*.tsv, \*.mafplus, etc.):** Using Perl script in the ./ADmiRE/ directory
 
 2. **VCF Files:** 
-    **a. Using Ensembl Variant Effect Predictor (VEP) tool:**
+    - a. Using Ensembl Variant Effect Predictor (VEP) tool:
     Follow instructionsin ./ADmiRE/annotate_VCF_using_VEP/Readme.md
     Requires prior VEP installation, suitable for users with existing VEP workflows.
-    **b. Using ANNOVAR:**
+    - b. Using ANNOVAR:
     ADmiRE is available as 'User-contributed-dataset' on ANNOVAR website for integration into existing pipelines.
     http://annovar.openbioinformatics.org/en/latest/user-guide/download/#user-contributed-datasets
 
