@@ -21,21 +21,18 @@ Preprint: https://www.biorxiv.org/content/early/2017/08/16/177170
 ### To annotate a Tab separated file:
 
 1. Clone the ADmiRE repository
-
-`git clone https://github.com/nroak/ADmiRE.git`
-
-Alternatively, you can download the ADmiRE directory in a ZIP file format. Make sure to save this file as **"ADmiRE"** and NOT **"ADmiRE-master"**.
-
-`unzip ADmiRE.zip`
+    `git clone https://github.com/nroak/ADmiRE.git`
+    
+    Alternatively, you can download the ADmiRE directory in a ZIP file format. Make sure to save this file as **"ADmiRE"** and NOT **"ADmiRE-master"**.
+    `unzip ADmiRE.zip`
 
 2. Unzip the ADmiRE.tab.gz file (Unzipped file size ~213 Mb)
-
-`gzip -d ADmiRE.tab.gz`
+    `gzip -d ADmiRE.tab.gz`
 
 3. Run the script to annotate the input file in a tab separated format.
-Note: The script assumes header line to start with **#** or **CHROM** or **Hugo_Symbol**. If one of these first column headers are present, ADmiRE column names are added to the header line at the end of original header. Otherwise, the output file will not contain a header line.
-
-`perl annotate_admire.pl [--input INPUT_FILE] [--output OUTPUT_FILE] [--admire_path PATH] [--chr NUMBER] [--pos NUMBER]`
+    Note: The script assumes header line to start with **#** or **CHROM** or **Hugo_Symbol**. If one of these first column headers are present, ADmiRE column names are added to the header line at the end of original header. Otherwise, the output file will not contain a header line.
+    
+    `perl annotate_admire.pl [--input INPUT_FILE] [--output OUTPUT_FILE] [--admire_path PATH] [--chr NUMBER] [--pos NUMBER]`
 
 ### Detailed desription of the input options:
 `perl annotate_admire.pl [--input INPUT_FILE] [--output OUTPUT_FILE] [--admire_path PATH] [--chr NUMBER] [--pos NUMBER]`
