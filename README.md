@@ -1,8 +1,11 @@
 # ADmiRE- Annotative Database of miRNA Elements
 **Published:**
+
 Oak, N. , Ghosh, R. , Huang, K. , Wheeler, D. A., Ding, L. and Plon, S. E. (2018), Framework for microRNA variant annotation and prioritization using human population and disease datasets. Human Mutation. Accepted Author Manuscript. doi:10.1002/humu.23668
 
-Preprint: https://www.biorxiv.org/content/early/2017/08/16/177170
+**Preprint:** 
+
+https://www.biorxiv.org/content/early/2017/08/16/177170
 
 ## Types of Input files
 
