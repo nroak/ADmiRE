@@ -6,9 +6,8 @@ Oak, N. , Ghosh, R. , Huang, K. , Wheeler, D. A., Ding, L. and Plon, S. E. (2018
 https://onlinelibrary.wiley.com/doi/abs/10.1002/humu.23668
 
 
-**Preprint:** 
-
-https://www.biorxiv.org/content/early/2017/08/16/177170
+Please reach out to me if you have any trouble using ADmiRE. This is my first attempt of making the code open access and I would love to keep improving my skills of making the code user-friendly.
+Afterall, we are all learning in the process...
 
 ## Types of Input files
 
